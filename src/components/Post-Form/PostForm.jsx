@@ -89,7 +89,7 @@ function PostForm({ post }) {
     ]);
   }
 
-  const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: {
       name: post?.name || '',
       // slug: post?.$id || '',
@@ -112,7 +112,8 @@ function PostForm({ post }) {
     // console.log(position.longitude);
     // nav('/')
     console.log('Postform :: data ->');
-    console.log(data.name);
+    console.log(data);
+
     // console.log(data.images[0]);
     // for (let index = 0; index < data.images.length; index++) {
     //   const image = data.images[index];
@@ -184,6 +185,12 @@ function PostForm({ post }) {
         console.log('success');
       }
 
+      else {
+        setLoading(false)
+        nav('/addPost')
+        console.log('failed');
+      }
+
     }
   }
 
@@ -251,7 +258,7 @@ function PostForm({ post }) {
               type="text"
               placeholder='Enter Your name'
               className='px-3 py-2 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-black w-4/5'
-              {...register('name')}
+              {...register('name', { required: true })}
             />
           </div>
 
@@ -261,7 +268,7 @@ function PostForm({ post }) {
               type="text"
               placeholder='herb, shrub, climber , tree , other'
               className='px-3 py-2 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-black w-4/5'
-              {...register('type')}
+              {...register('type', { required: true })}
             />
           </div>
 
@@ -271,7 +278,7 @@ function PostForm({ post }) {
               type="text"
               placeholder='agri field, orchard, forest, garden, other'
               className='px-3 py-2 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-black w-4/5'
-              {...register('habitat')}
+              {...register('habitat', { required: true })}
             />
           </div>
 
@@ -281,7 +288,7 @@ function PostForm({ post }) {
               type="number"
               placeholder='in &deg;celsius'
               className='px-3 py-2 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-black w-4/5'
-              {...register('temp')}
+              {...register('temp', { required: true })}
             />
           </div>
 
@@ -291,7 +298,7 @@ function PostForm({ post }) {
               type="text"
               placeholder='Spring, Summer, Monsoon, Autumn, Winter'
               className='px-3 py-2 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-black w-4/5'
-              {...register('season')}
+              {...register('season', { required: true })}
             />
           </div>
 
