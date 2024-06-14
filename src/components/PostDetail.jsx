@@ -15,7 +15,6 @@ function PostDetail() {
                 if (post) setPost(post)
             })
         }
-        console.log(post);
     }, [slug])
 
     return (post ?
@@ -25,7 +24,6 @@ function PostDetail() {
                     (
                         <img
                             src={service.getFilePreview(post.featuredImage)}
-                            alt={post.name}
                             className='object-cover object-center'
                         />
                     ) : null
@@ -35,7 +33,6 @@ function PostDetail() {
                     (
                         <img
                             src={service.getFilePreview(post.image1)}
-                            alt={post.name}
                             className='object-cover object-center'
                         />
                     ) : null
@@ -45,7 +42,6 @@ function PostDetail() {
                     (
                         <img
                             src={service.getFilePreview(post.image2)}
-                            alt={post.name}
                             className='object-cover object-center'
                         />
                     ) : null
@@ -55,7 +51,6 @@ function PostDetail() {
                     (
                         <img
                             src={service.getFilePreview(post.image3)}
-                            alt={post.name}
                             className='object-cover object-center'
                         />
                     ) : null
@@ -65,7 +60,6 @@ function PostDetail() {
                     (
                         <img
                             src={service.getFilePreview(post.image4)}
-                            alt={post.name}
                             className='object-cover object-center'
                         />
                     ) : null

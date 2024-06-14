@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import appwriteService from '../../appwrite/config'
 import { useSelector } from 'react-redux';
 import Hamster from '../Animations/Hamster';
-import { Header } from '../Header/Header';
 
 function PostForm({ post }) {
   // const [position, setPosition] = useState({ latitude: null, longitude: null })
