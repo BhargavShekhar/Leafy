@@ -61,7 +61,7 @@ export function Header() {
           <span>
             <img className='h-16 object-cover object-top' src="assets/logo.png" alt="reload" />
           </span>
-          <span className="font-bold">Leafy</span>
+          <span className="font-bold">Pheno App</span>
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
