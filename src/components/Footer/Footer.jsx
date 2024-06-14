@@ -8,7 +8,7 @@ export function Footer() {
                     <div className="w-full p-6 md:w-1/2 lg:w-5/12">
                         <div className="flex h-full flex-col justify-between">
                             <div className="mb-4 inline-flex items-center">
-                                <img className='h-16 object-cover object-top' href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhero.fandom.com%2Fwiki%2FLeafy_%2528BFDI%2529&psig=AOvVaw11B3FzCxnYzH6YdiYum6Zy&ust=1718435332195000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiYxM_E2oYDFQAAAAAdAAAAABAE" alt="reload" />
+{/*                                 <img className='h-16 object-cover object-top' href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhero.fandom.com%2Fwiki%2FLeafy_%2528BFDI%2529&psig=AOvVaw11B3FzCxnYzH6YdiYum6Zy&ust=1718435332195000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiYxM_E2oYDFQAAAAAdAAAAABAE" alt="reload" /> */}
                                 <span className="ml-4 text-lg font-bold">Leafy</span>
                             </div>
                             <div>
