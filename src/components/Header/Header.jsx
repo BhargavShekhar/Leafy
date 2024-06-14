@@ -59,7 +59,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
-            <img className='h-16 object-cover object-top' src="assets/logo.png" alt="reload" />
+            <img className='h-16 object-cover object-top' src="public/src/assets/logo.png" alt="reload" />
           </span>
           <span className="font-bold">Pheno App</span>
         </div>
