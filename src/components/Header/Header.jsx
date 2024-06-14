@@ -127,7 +127,7 @@ export function Header() {
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
                     <span>
-                      <img className='h-16 object-cover object-top' src="/src/assets/logo.png" alt="reload" />
+                      {/* <img className='h-16 object-cover object-top' src="/src/assets/logo.png" alt="reload" /> */}
                     </span>
                     <span className="font-bold">Leafy</span>
                   </div>
