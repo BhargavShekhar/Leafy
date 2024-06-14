@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Micro+5+Charted&family=Pacifico&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (max-width: 670px) {
+    .custom-responsive {
+      height: 31vh; /* Custom height for screens less than 670px */
+      width: 45%; /* Custom width for screens less than 670px */
+    }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+}
+
+.micro-5-charted-regular {
+  font-family: "Micro 5 Charted", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
