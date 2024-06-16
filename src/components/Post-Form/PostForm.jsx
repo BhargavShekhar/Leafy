@@ -201,7 +201,7 @@ function PostForm({ post }) {
         onSubmit={handleSubmit(submit)}
         className='h-[100vh] w-[100vw] px-8 py-5 flex flex-wrap justify-center items-center gap-12 bg-no-repeat bg-cover bg-center'
         style={
-          { backgroundImage: {bgImage}, }
+          { backgroundImage: `url(${bgImage})`, }
         }
       >
 
