@@ -57,7 +57,7 @@ export function Header() {
   ]
 
   return (
-    <div className="relative w-full h-20 p-2 border border-black bg-white">
+    <div className="relative w-full border border-black bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
@@ -70,7 +70,6 @@ export function Header() {
             {menuItems.map((item) => (
               item.active ?
                 <li key={item.name}>
-                  {/* TODO add button and onclick -> navigate function DO the same for resposive part */}
                   <Link
                     to={item.slug}
                     className="font-bold text-gray-800 hover:text-black hover:underline"
@@ -129,7 +128,7 @@ export function Header() {
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
                     <span>
-                      {/* <img className='h-16 object-cover object-top' src="/src/assets/logo.png" alt="reload" /> */}
+                      <img className='h-16 object-cover object-top' src={logo} alt="reload" />
                     </span>
                     <span className="font-bold">Leafy</span>
                   </div>
