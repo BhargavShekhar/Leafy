@@ -67,12 +67,12 @@ function PostDetail() {
 
 
             </div>
-            <div className='border  flex flex-col p-7 gap-12 justify-center items-center font-test micro-5-charted-regular'>
-                <h1 className='2xl:text-4xl font-mono '>Plant Name: {post.name}</h1>
-                <h1 className='2xl:text-4xl font-mono '>Type: {post.type}</h1>
-                <h1 className='2xl:text-4xl font-mono '>Habitatt: {post.habitat}</h1>
-                <h1 className='2xl:text-4xl font-mono '>Temp: {post.temp}&deg;C</h1>
-                <h1 className='2xl:text-4xl font-mono '>Season: {post.season}</h1>
+            <div className='border flex flex-col p-7 gap-12 justify-center items-center micro-5-charted-regular dancing-script'>
+                <h1 className='2xl:text-6xl text-black ml-12'>Plant Name: {post.name}</h1>
+                <h1 className='2xl:text-6xl text-black'>Type: {post.type}</h1>
+                <h1 className='2xl:text-6xl text-black'>Habitatt: {post.habitat}</h1>
+                <h1 className='2xl:text-6xl text-black'>Temp: {post.temp}&deg;C</h1>
+                <h1 className='2xl:text-6xl text-black'>Season: {post.season}</h1>
             </div>
         </div>
 

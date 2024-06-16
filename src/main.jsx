@@ -11,6 +11,7 @@ import { Signup } from './components/Signup.jsx'
 import PostForm from './components/Post-Form/PostForm.jsx'
 import Home from './components/Home.jsx'
 import PostDetail from './components/PostDetail.jsx'
+import About from './components/About.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,16 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
+        path: '/about',
+        element: <About />
+      },
+      {
         path: '/plant/:slug',
         element: <PostDetail />
+      },
+      {
+        path: '/addPost',
+        element: <PostForm />
       }
     ]
   },
@@ -34,10 +43,6 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />
-  },
-  {
-    path: '/addPost',
-    element: <PostForm />
   }
 ]);
 

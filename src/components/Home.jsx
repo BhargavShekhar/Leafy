@@ -23,8 +23,6 @@ function Home() {
     //         .finally(() => setLoading(false))
     // }, [])
 
-    // get all post
-
     const [loading, setLoading] = useState(false)
     const [posts, setPost] = useState([])
 
@@ -34,14 +32,14 @@ function Home() {
                 setPost(posts.documents)
                 setLoading(true)
             }
-            // console.log(posts);
+            console.log(posts);
         })
     }, [])
 
     return (
         loading ?
-            <>
-                <h1 className='text-center text-4xl font-normal from-neutral-700 py-4 px-2'>
+            <div>
+                <h1 className='text-black text-center text-4xl font-normal from-neutral-700 py-4 px-2'>
                     Leafy: Planting the Seeds of Knowledge
                 </h1>
                 <main className='min-h-[70vh] py-4 flex flex-wrap text-center justify-center'>
@@ -52,7 +50,7 @@ function Home() {
                     ))}
 
                 </main>
-            </> :
+            </div> :
             <div className='flex justify-center items-center'>
                 <Hamster />
             </div>

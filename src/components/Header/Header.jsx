@@ -41,7 +41,7 @@ export function Header() {
     },
     {
       name: 'About',
-      slug: '#',
+      slug: '/about',
       active: true
     },
     {

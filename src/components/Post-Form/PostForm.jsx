@@ -199,7 +199,7 @@ function PostForm({ post }) {
     <>
       <form
         onSubmit={handleSubmit(submit)}
-        className='h-[100vh] w-[100vw] px-8 py-5 flex flex-wrap justify-center items-center gap-12 bg-no-repeat bg-cover bg-center'
+        className='px-8 py-5 flex flex-wrap justify-center items-center gap-12 bg-no-repeat bg-cover bg-center'
         style={
           { backgroundImage: `url(${bgImage})`, }
         }
@@ -237,7 +237,7 @@ function PostForm({ post }) {
 
           </div>
 
-          <div className='container min-h-24 max-w-[100%] mb-3 flex flex-wrap gap-2'>
+          <div className='min-h-24 max-w-[100%] mb-3 flex flex-wrap gap-2'>
             {images.length === 0 ? (
               <h1 className='text-xl text-cyan-900'>*Please Upload Full part of the plant along with there different parts</h1>
             ) : null
