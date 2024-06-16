@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import appwriteService from '../../appwrite/config'
 import { useSelector } from 'react-redux';
 import Hamster from '../Animations/Hamster';
+import bgImage from '../../assets/postFormBg.jpg'
 
 function PostForm({ post }) {
   // const [position, setPosition] = useState({ latitude: null, longitude: null })
@@ -200,7 +201,7 @@ function PostForm({ post }) {
         onSubmit={handleSubmit(submit)}
         className='h-[100vh] w-[100vw] px-8 py-5 flex flex-wrap justify-center items-center gap-12 bg-no-repeat bg-cover bg-center'
         style={
-          { backgroundImage: "url('/src/assets/postFormBg.jpg')", }
+          { backgroundImage: {bgImage}, }
         }
       >
 
