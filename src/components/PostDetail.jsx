@@ -18,7 +18,7 @@ function PostDetail() {
     }, [slug])
 
     return (post ?
-        <div className='border bg-slate-300/40 text-center 2xl:h-[120vh] flex'>
+        <div className='border bg-slate-200 bg-gradient-to-b from-slate-200/10 to-slate-200/55 text-center 2xl:h-[120vh] flex'>
             <div className='border px-2 py-4 2xl:w-[57%] flex flex-col gap-2 overflow-scroll no-scrollbar'>
                 {post.featuredImage ?
                     (
@@ -67,12 +67,32 @@ function PostDetail() {
 
 
             </div>
-            <div className='border flex flex-col p-7 gap-12 justify-center items-center micro-5-charted-regular dancing-script'>
-                <h1 className='2xl:text-6xl text-black ml-12'>Plant Name: {post.name}</h1>
-                <h1 className='2xl:text-6xl text-black'>Type: {post.type}</h1>
-                <h1 className='2xl:text-6xl text-black'>Habitatt: {post.habitat}</h1>
-                <h1 className='2xl:text-6xl text-black'>Temp: {post.temp}&deg;C</h1>
-                <h1 className='2xl:text-6xl text-black'>Season: {post.season}</h1>
+            <div className='border flex flex-col p-7 gap-7 justify-center items-center dancing-script'>
+                <h1
+                    className='2xl:text-6xl text-yellow-900 bg-gray-400/10 rounded-2xl shadow-xl px-4 py-3 ml-8'
+                >
+                    Plant Name: {post.name}
+                </h1>
+                <h1
+                    className='2xl:text-6xl text-yellow-900 bg-gray-400/10 rounded-2xl shadow-xl  px-4 py-3 '
+                >
+                    Type: {post.type}
+                </h1>
+                <h1
+                    className='2xl:text-6xl text-yellow-900 bg-gray-400/10 rounded-2xl shadow-xl  px-4 py-3 '
+                >
+                    Habitatt: {post.habitat}
+                </h1>
+                <h1
+                    className='2xl:text-6xl text-yellow-900 bg-gray-400/10 rounded-2xl shadow-xl  px-4 py-3 '
+                >
+                    Temp: {post.temp}&deg;C
+                </h1>
+                <h1
+                    className='2xl:text-6xl text-yellow-900 bg-gray-400/10 rounded-2xl shadow-xl  px-4 py-3 '
+                >
+                    Season: {post.season}
+                </h1>
             </div>
         </div>
 

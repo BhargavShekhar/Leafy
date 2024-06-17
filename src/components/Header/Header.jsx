@@ -57,13 +57,13 @@ export function Header() {
   ]
 
   return (
-    <div className="relative w-full border border-black bg-white">
+    <div className="relative w-full bg-white border-cyan-900 border-b shadow-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
             <img className='h-16 object-cover object-top' src={logo} alt="reload" />
           </span>
-          <span className="font-bold text-xl">Leafy</span>
+          <span className="font-bold text-xl text-green-900">PhenoApp</span>
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
@@ -72,7 +72,7 @@ export function Header() {
                 <li key={item.name}>
                   <Link
                     to={item.slug}
-                    className="font-bold text-gray-800 hover:text-black hover:underline"
+                    className="py-2 px-2 font-bold text-black rounded-lg hover:text-green-800 hover:border-b border-dotted border-black"
                   >
                     {item.name}
                   </Link>
@@ -96,7 +96,7 @@ export function Header() {
           {!authStatus &&
             <button
               type="button"
-              className="bg-black text-white border border-gray-500 border-b-4 font-medium overflow-hidden relative px-2 py-1 mr-4 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+              className="bg-black text-white border border-gray-500 border-b-4 font-medium overflow-hidden relative px-3 py-2 mr-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
               onClick={handleSignup}
             >
               <span
@@ -108,7 +108,7 @@ export function Header() {
           {!authStatus &&
             <button
               type="button"
-              className="bg-black text-white border border-gray-500 border-b-4 font-medium overflow-hidden relative px-3 py-1 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+              className="bg-black text-white border border-gray-500 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
               onClick={handleLogin}
             >
               <span
@@ -130,7 +130,7 @@ export function Header() {
                     <span>
                       <img className='h-16 object-cover object-top' src={logo} alt="reload" />
                     </span>
-                    <span className="font-bold">Leafy</span>
+                    <span className="font-bold">PhenoApp</span>
                   </div>
                   <div className="-mr-2">
                     <button

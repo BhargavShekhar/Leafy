@@ -31,7 +31,7 @@ export function Signup() {
     return (
         <div className='flex justify-center items-center h-[100vh] w-[100vw] bg-gradient-to-r from-sky-500 to-indigo-600/90'>
             <div className="flex justify-center h-4/6 w-96 text-wrap">
-                <div className="card">
+                <div className="card bg-gradient-to-r from-gray-200 from-20% via-white via-70% to-gray-100 to-80% ">
                     <a className="singup">Sign Up</a>
 
                     <p>

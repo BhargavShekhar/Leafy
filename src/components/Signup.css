@@ -17,9 +17,9 @@
     flex-direction: column;
     gap: 32px;
     border-radius: 15px;
-    background: #feffffed;
+    /* background: #feffffed; */
     box-shadow: 8px 8px 16px #02449bbc,
-          -8px -8px 16px #0cc4c7ae;
+          -8px -8px 16px #0cc4c76e;
     border-radius: 8px;
   }
 

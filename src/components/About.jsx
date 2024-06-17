@@ -33,7 +33,7 @@ function About() {
                         </div>
                     </div>
                     <div className="divider"></div>
-                    <div className="name">Sudeepa ki mam</div>
+                    <div className="name">Prof</div>
                     <div className="title bg-gray-300/45 rounded-xl">professor</div>
                 </div>
                 <div className="person">
@@ -47,7 +47,7 @@ function About() {
                     </div>
                     <div className="divider"></div>
                     <div className="name">Sudeepa</div>
-                    <div className="title bg-gray-300/45 rounded-xl">Ptaa ni Kyaa hai</div>
+                    <div className="title bg-gray-300/45 rounded-xl">IDK</div>
                 </div>
                 <div className="person">
                     <div className="container">
@@ -63,7 +63,7 @@ function About() {
                         </div>
                     </div>
                     <div className="divider"></div>
-                    <div className="name">Anton</div>
+                    <div className="name">Decide</div>
                     <div className="title bg-gray-300/45 rounded-xl">Senior UX</div>
                 </div>
             </div>

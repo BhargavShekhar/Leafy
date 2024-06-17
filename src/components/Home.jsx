@@ -39,10 +39,10 @@ function Home() {
     return (
         loading ?
             <div>
-                <h1 className='text-black text-center text-4xl font-normal from-neutral-700 py-4 px-2'>
-                    Leafy: Planting the Seeds of Knowledge
+                <h1 className='text-center text-5xl text-yellow-900 dancing-script underline underline-offset-8 decoration-2 pt-9 px-2 bg-gradient-to-b from-cyan-400/5 hover:text-yellow-700'>
+                    PhenoApp, Accelerating Plant Science !
                 </h1>
-                <main className='min-h-[70vh] py-4 flex flex-wrap text-center justify-center'>
+                <main className='min-h-[70vh] py-4 flex flex-wrap text-center justify-center micro-5-charted-regular'>
                     {/* <Post />  bg-teal-300/5 bg-gradient-to-t from-teal-300/55 to-[#8bfcfe0e] shadow-md  */}
 
                     {posts.map((post) => (
