@@ -67,9 +67,9 @@ function PostDetail() {
 
 
             </div>
-            <div className='border flex flex-col p-7 gap-7 justify-center items-center dancing-script'>
+            <div className='border flex flex-col p-12 gap-5 justify-center items-center dancing-script'>
                 <h1
-                    className='2xl:text-6xl text-yellow-900 bg-gray-400/10 rounded-2xl shadow-xl px-4 py-3 ml-8'
+                    className='2xl:text-6xl text-yellow-900 bg-gray-400/10 rounded-2xl shadow-xl px-4 py-3'
                 >
                     Plant Name: {post.name}
                 </h1>

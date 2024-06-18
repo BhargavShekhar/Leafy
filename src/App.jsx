@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import authService from './appwrite/auth'
 import { useDispatch } from 'react-redux'
 import { login, logout } from './store/authSlice'
-import { Footer } from './components/Footer/Footer'
+// import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 
 function App() {

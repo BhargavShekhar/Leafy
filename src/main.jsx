@@ -12,6 +12,7 @@ import PostForm from './components/Post-Form/PostForm.jsx'
 import Home from './components/Home.jsx'
 import PostDetail from './components/PostDetail.jsx'
 import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />
+  },
+  {
+    path: '/contact-us',
+    element: <Contact />
   }
 ]);
 

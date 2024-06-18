@@ -46,7 +46,7 @@ export function Header() {
     },
     {
       name: 'Contact',
-      slug: '#',
+      slug: '/contact-us',
       active: true
     },
     {
@@ -63,7 +63,7 @@ export function Header() {
           <span>
             <img className='h-16 object-cover object-top' src={logo} alt="reload" />
           </span>
-          <span className="font-bold text-xl text-green-900">PhenoApp</span>
+          <span className="py-1 font-bold text-xl text-green-900 shadow-lg shadow-yellow-300 rounded-md  hover:brightness-150">PhenoApp</span>
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
@@ -72,7 +72,7 @@ export function Header() {
                 <li key={item.name}>
                   <Link
                     to={item.slug}
-                    className="py-2 px-2 font-bold text-black rounded-lg hover:text-green-800 hover:border-b border-dotted border-black"
+                    className="py-2 px-2 font-bold text-black rounded-lg hover:text-green-800 border-b hover:border-t border-dotted border-black shadow-md"
                   >
                     {item.name}
                   </Link>
@@ -84,11 +84,11 @@ export function Header() {
           {authStatus &&
             <button
               type="button"
-              className="bg-black text-white border border-gray-500 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+              className="bg-gray-200 text-black font-bold border border-gray-700 border-b-4 overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
               onClick={handleLogout}
             >
               <span
-                className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+                className="bg-green-900 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
               ></span>
               Logout
             </button>}
@@ -96,11 +96,11 @@ export function Header() {
           {!authStatus &&
             <button
               type="button"
-              className="bg-black text-white border border-gray-500 border-b-4 font-medium overflow-hidden relative px-3 py-2 mr-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+              className="bg-gray-200 text-black font-bold border border-gray-700 border-b-4 overflow-hidden relative px-3 py-2 mr-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
               onClick={handleSignup}
             >
               <span
-                className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+                className="bg-green-900 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
               ></span>
               Signup
             </button>}
@@ -108,11 +108,11 @@ export function Header() {
           {!authStatus &&
             <button
               type="button"
-              className="bg-black text-white border border-gray-500 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+              className="bg-gray-200 text-black font-bold border border-gray-700 border-b-4 overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
               onClick={handleLogin}
             >
               <span
-                className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+                className="bg-green-900 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
               ></span>
               Login
             </button>}
