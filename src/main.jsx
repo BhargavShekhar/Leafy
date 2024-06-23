@@ -34,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/addPost',
         element: <PostForm />
+      },
+      {
+        path: '/contact-us',
+        element: <Contact />
       }
     ]
   },
@@ -45,10 +49,6 @@ const router = createBrowserRouter([
     path: '/signup',
     element: <Signup />
   },
-  {
-    path: '/contact-us',
-    element: <Contact />
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

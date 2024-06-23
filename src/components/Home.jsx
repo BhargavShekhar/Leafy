@@ -51,7 +51,7 @@ function Home() {
 
                 </main>
             </div> :
-            <div className='flex justify-center items-center'>
+            <div className='h-[70vh] flex justify-center items-center'>
                 <Hamster />
             </div>
     )

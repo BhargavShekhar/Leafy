@@ -1,193 +1,71 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react'
+import './Contact.css'
+import { Link } from 'react-router-dom'
 
 function Contact() {
-  const canvasRef = useRef(null);
-  const particlesRef = useRef([]);
-  const mouseRef = useRef({ x: -500, y: -500, radius: 50 });
-  const textArrayRef = useRef(["Will be", "Available", "Soon!!."]);
-  const textIndexRef = useRef(0);
-  const nextTextTimeoutRef = useRef(null);
+  return (
+    <div>
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    class Particle {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.size = 1;
-        this.baseX = x;
-        this.baseY = y;
-        this.density = Math.random() * 30 + 1;
-        this.color = 'white';
-        this.history = [];
-      }
-
-      update() {
-        let dx = mouseRef.current.x - this.x;
-        let dy = mouseRef.current.y - this.y;
-        let distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < mouseRef.current.radius) {
-          let forceDirectionX = dx / distance;
-          let forceDirectionY = dy / distance;
-          let maxDistance = mouseRef.current.radius;
-          let force = (maxDistance - distance) / maxDistance;
-          let directionX = forceDirectionX * force * this.density;
-          let directionY = forceDirectionY * force * this.density;
-
-          this.x -= directionX;
-          this.y -= directionY;
-        } else {
-          this.x += (this.baseX - this.x) * 0.05;
-          this.y += (this.baseY - this.y) * 0.05;
-        }
-
-        this.history.push({ x: this.x, y: this.y });
-        if (this.history.length > 10) {
-          this.history.shift();
-        }
-
-        const speed = Math.sqrt(
-          (this.baseX - this.x) ** 2 + (this.baseY - this.y) ** 2
-        );
-        const hue = (speed / 100) * 360;
-
-        this.color = `hsl(${hue}, 100%, ${100 - speed / 5}%)`;
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.moveTo(this.history[0].x, this.history[0].y);
-        for (let i = 1; i < this.history.length; i++) {
-          ctx.lineTo(this.history[i].x, this.history[i].y);
-        }
-        ctx.strokeStyle = this.color;
-        ctx.stroke();
-
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.fill();
-      }
-    }
-
-    const getTextCoordinates = (text) => {
-      const fontSize = Math.min(canvas.width / 10, canvas.height / 5);
-      ctx.font = `${fontSize}px Arial`;
-      ctx.fillStyle = 'white';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-
-      const x = canvas.width / 2;
-      const y = canvas.height / 2;
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillText(text, x, y);
-
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-      const coordinates = [];
-
-      for (let y = 0; y < canvas.height; y += 4) {
-        for (let x = 0; x < canvas.width; x += 4) {
-          const index = (y * canvas.width + x) * 4;
-          if (imageData[index + 3] > 128) {
-            coordinates.push({ x, y });
+      <div
+        className='h-[120vh] p-2'
+        style={
+          {
+            backgroundImage: `url(https://images.pexels.com/photos/1084188/pexels-photo-1084188.jpeg?auto=compress&cs=tinysrgb&w=600`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
           }
         }
-      }
+      >
 
-      return coordinates;
-    };
+        <div className="row">
+          <h1 className='text-center text-black font-semibold text-7xl underline py-3 dancing-script bg-gray-300/10'>Contact Us</h1>
+        </div>
+        <div className="row">
+          <h4 className='text-black text-4xl dancing-script' style={{ textAlign: 'center' }}>We'd love to hear from you!</h4>
+        </div>
 
-    const createParticles = () => {
-      particlesRef.current.length = 0;
-      const textCoordinates = getTextCoordinates(textArrayRef.current[textIndexRef.current]);
+        <div className="row input-container dancing-script">
+          <div className="col-xs-12">
+            <div className="styled-input wide border border-opacity-80 border-black shadow-xl shadow-cyan-300/40">
+              <input type="text" required />
+              <label>Name</label>
+            </div>
+          </div>
+          <div className="col-md-6 col-sm-12">
+            <div className="styled-input border border-opacity-85 border-black shadow-xl shadow-cyan-300/40">
+              <input type="text" required />
+              <label>Email</label>
+            </div>
+          </div>
+          <div className="col-md-6 col-sm-12">
+            <div className="styled-input border border-opacity-85 border-black shadow-xl shadow-cyan-300/40" style={{ float: 'right' }}>
+              <input type="text" required />
+              <label>Phone Number</label>
+            </div>
+          </div>
+          <div className="col-xs-12">
+            <div className="styled-input wide border border-opacity-85 border-black shadow-xl shadow-green-300/40">
+              <textarea required></textarea>
+              <label>Message</label>
+            </div>
+          </div>
+          <div className="col-xs-12">
+            <Link to={'/'}>
+              <div className="btn-lrg submit-btn bg-gray-200 text-black font-bold border border-gray-700 border-b-4 overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                <span
+                  className="bg-green-900 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+                >
+                </span>
+                Send Message
+              </div>
+            </Link>
+          </div>
+        </div>
 
-      for (let i = 0; i < 1200; i++) {
-        const randomIndex = Math.floor(Math.random() * textCoordinates.length);
-        const x = textCoordinates[randomIndex].x;
-        const y = textCoordinates[randomIndex].y;
-        particlesRef.current.push(new Particle(x, y));
-      }
-    };
-
-    const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      particlesRef.current.forEach((particle) => {
-        particle.update();
-        particle.draw();
-      });
-
-      requestAnimationFrame(animate);
-    };
-
-    const changeText = () => {
-      textIndexRef.current = (textIndexRef.current + 1) % textArrayRef.current.length;
-      const newCoordinates = getTextCoordinates(textArrayRef.current[textIndexRef.current]);
-
-      particlesRef.current.forEach((particle, index) => {
-        if (index < newCoordinates.length) {
-          particle.baseX = newCoordinates[index].x;
-          particle.baseY = newCoordinates[index].y;
-        } else {
-          particle.baseX = Math.random() * canvas.width;
-          particle.baseY = Math.random() * canvas.height;
-        }
-      });
-
-      nextTextTimeoutRef.current = setTimeout(changeText, 3000);
-    };
-
-    canvas.addEventListener('mousemove', (event) => {
-      mouseRef.current.x = event.clientX;
-      mouseRef.current.y = event.clientY;
-    });
-
-    canvas.addEventListener('mouseleave', () => {
-      mouseRef.current.x = -500;
-      mouseRef.current.y = -500;
-    });
-
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      createParticles();
-    });
-
-    createParticles();
-    animate();
-    nextTextTimeoutRef.current = setTimeout(changeText, 3000);
-
-    return () => {
-      clearTimeout(nextTextTimeoutRef.current);
-      window.removeEventListener('resize', () => {});
-      canvas.removeEventListener('mousemove', () => {});
-      canvas.removeEventListener('mouseleave', () => {});
-    };
-  }, []);
-
-  return (
-    <div style={{
-      display: 'grid',
-      justifyItems: 'center',
-      height: '100vh',
-      background: '#222',
-    }}>
-      <canvas ref={canvasRef} style={{
-        position: 'fixed',
-        inset: '0',
-        width: '100%',
-        height: '100%',
-      }}></canvas>
+      </div>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

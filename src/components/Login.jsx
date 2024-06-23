@@ -33,7 +33,7 @@ function Login() {
 
     return (
         <div className='h-[100vh] w-[100vw] bg-gradient-to-r from-sky-500 to-indigo-600 flex justify-center items-center'>
-            <div className="h-3/4 w-96 relative flex flex-col p-7 rounded-2xl text-black bg-gradient-to-t from-cyan-50 from-20% via-cyan-100/95 via-97% to-white to-57% shadow-2xl shadow-black">
+            <div className="h-3/4 w-96 relative flex flex-col p-7 rounded-2xl text-black bg-gradient-to-t from-cyan-50 from-20% via-cyan-100/95 via-97% to-white to-57% shadow-2xl shadow-black m-4">
                 <div className="text-2xl font-bold mb-2 text-[#1e0e4b] text-center">
                     Welcome back to{" "}
                     <span className="text-[#7747ff]">

@@ -122,7 +122,7 @@ export function Header() {
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
         </div>
         {isMenuOpen && (
-          <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">
+          <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden dancing-script">
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
@@ -130,7 +130,7 @@ export function Header() {
                     <span>
                       <img className='h-16 object-cover object-top' src={logo} alt="reload" />
                     </span>
-                    <span className="font-bold">PhenoApp</span>
+                    <span className="font-extrabold text-2xl bg-green-200/10 p-1 rounded-xl">PhenoApp</span>
                   </div>
                   <div className="-mr-2">
                     <button
@@ -152,7 +152,7 @@ export function Header() {
                           to={item.slug}
                           className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
                         >
-                          <span className="ml-3 text-base font-medium text-gray-900">
+                          <span className="ml-3 text-lg font-medium text-gray-900 rounded-lg p-1">
                             {item.name}
                           </span>
                         </Link> : null
@@ -163,7 +163,7 @@ export function Header() {
                   authStatus &&
                   <button
                     type="button"
-                    className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="bg-gray-900 text-white font-bold border border-gray-400 border-b-4 overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group w-full mt-4"
                     onClick={handleLogout}
                   >
                     Logout
@@ -174,7 +174,7 @@ export function Header() {
                   !authStatus &&
                   <button
                     type="button"
-                    className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="bg-gray-900 text-white font-bold border border-gray-400 border-b-4 overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group w-full mt-4"
                     onClick={handleSignup}
                   >
                     Signup
@@ -184,7 +184,7 @@ export function Header() {
                   !authStatus &&
                   <button
                     type="button"
-                    className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="bg-gray-900 text-white font-bold border border-gray-400 border-b-4 overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group w-full mt-4"
                     onClick={handleLogin}
                   >
                     Login
