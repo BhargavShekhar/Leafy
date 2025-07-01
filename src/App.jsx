@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 import authService from './appwrite/auth'
 import { useDispatch } from 'react-redux'
 import { login, logout } from './store/authSlice'
-// import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
     authService.getCurrentUser()
         .then((userData) => {
             if (userData) {
-                // dispatch in store to update reducer
                 dispatch(login({ userData }))
             }
             else {
@@ -30,7 +28,6 @@ function App() {
     <>
       <Header />
       <Outlet />
-      {/* <Footer /> */}
     </>
   )
 }

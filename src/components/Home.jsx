@@ -5,29 +5,11 @@ import appwriteService from '../appwrite/config'
 import Hamster from './Animations/Hamster'
 
 function Home() {
-    // const dispatch = useDispatch()
-
-    // Shifted this to App
-    // useEffect(() => {
-    //     // check if user is login
-    //     authService.getCurrentUser()
-    //         .then((userData) => {
-    //             if (userData) {
-    //                 // dispatch in store to update reducer
-    //                 dispatch(login({ userData }))
-    //             }
-    //             else {
-    //                 dispatch(logout())
-    //             }
-    //         })
-    //         .finally(() => setLoading(false))
-    // }, [])
-
     const [loading, setLoading] = useState(false)
     const [posts, setPost] = useState([])
 
     useEffect(() => {
-        appwriteService.getPost([]).then((posts) => {
+        appwriteService.getPosts([]).then((posts) => {
             if (posts) {
                 setPost(posts.documents)
                 setLoading(true)
@@ -43,8 +25,6 @@ function Home() {
                     PhenoApp, Accelerating Plant Science !
                 </h1>
                 <main className='min-h-[70vh] py-4 flex flex-wrap text-center justify-center micro-5-charted-regular'>
-                    {/* <Post />  bg-teal-300/5 bg-gradient-to-t from-teal-300/55 to-[#8bfcfe0e] shadow-md  */}
-
                     {posts.map((post) => (
                         <Post key={post.$id} {...post} />
                     ))}

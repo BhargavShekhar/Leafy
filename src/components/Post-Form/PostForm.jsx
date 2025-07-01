@@ -9,23 +9,8 @@ import Hamster from '../Animations/Hamster';
 import bgImage from '../../assets/postFormBg.jpg'
 
 function PostForm({ post }) {
-  // const [position, setPosition] = useState({ latitude: null, longitude: null })
   const nav = useNavigate()
   const [loading, setLoading] = useState(false);
-
-  // useEffect(() => {
-  //   if ("geolocation" in navigator) {
-  //     navigator.geolocation.getCurrentPosition(function (position) {
-  //       setPosition({
-  //         latitude: position.coords.latitude,
-  //         longitude: position.coords.longitude
-  //       })
-  //     })
-  //   }
-  //   else {
-  //     console.log("Can not access your location");
-  //   }
-  // }, [])
 
   // TODO Use it in images map instead of index
   const id = useId();
@@ -33,11 +18,6 @@ function PostForm({ post }) {
   const [images, setImages] = useState([]);
   const [isDraging, setIsDraging] = useState(false);
   const fileInputRef = useRef(null);
-
-  // TODO Remove this
-  // const selectFiles = () => {
-  //   fileInputRef.current.click()
-  // }
 
   const onFileSelect = (event) => {
     const files = event.target.files;
@@ -104,22 +84,8 @@ function PostForm({ post }) {
   const userData = useSelector(state => state.auth.userData)
 
   const submit = async (data) => {
-    // const date = moment().format('DD MM YYYY')
-    // const time = moment().format('hh:mm:ss')
-    // console.log('Images: ', images);
-    // console.log('Day of upload:', date);
-    // console.log('time of upload:', time);
-    // console.log(position.latitude);
-    // console.log(position.longitude);
-    // nav('/')
     console.log('Postform :: data ->');
     console.log(data);
-
-    // console.log(data.images[0]);
-    // for (let index = 0; index < data.images.length; index++) {
-    //   const image = data.images[index];
-    //   await appwriteService.uploadFile(image)
-    // }
 
     setLoading(true)
 
@@ -314,21 +280,6 @@ function PostForm({ post }) {
     <div className='flex justify-center items-center'>
       <Hamster />
     </div>
-
-
-    // <input type="file" className='mb-4 bg-white py-2 px-2 rounded-md' accept='image/png, image/jpg, image/jpeg, image/gif' />
-    // <label htmlFor={id} className='inline-block mb-1 pl-1'>Part of a Plant:</label>
-    // <div>
-    //   <h2>Your Current Location is</h2>
-    //   {position.latitude && position.longitude ?
-    //     (
-    //       <p>Latitude: {position.latitude}, Longitude: {position.longitude}</p>
-    //     ) :
-    //     (
-    //       <p>Loading ...</p>
-    //     )
-    //   }
-    // </div>
   )
 }
 

@@ -128,10 +128,13 @@ export class Service {
     }
 
     getFilePreview(fileId) {
-        return this.bucket.getFilePreview(
-            conf.appwriteBucketId,
-            fileId
-        )
+        // console.log(`https://cloud.appwrite.io/v1/storage/buckets/${conf.appwriteBucketId}/files/${fileId}/view?project=${conf.appwriteProjectId}`)
+        // return this.bucket.getFilePreview(
+        //     conf.appwriteBucketId,
+        //     fileId
+        // )
+        return `https://cloud.appwrite.io/v1/storage/buckets/${conf.appwriteBucketId}/files/${fileId}/view?project=${conf.appwriteProjectId}`;
+
     }
 
 }
